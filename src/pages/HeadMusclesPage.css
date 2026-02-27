@@ -1,0 +1,65 @@
+.muscles-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #F9F9F9;
+}
+
+.muscles-content {
+    flex: 1;
+    padding: 16px;
+    background-color: #FFFFFF;
+}
+
+.muscle-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.muscle-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 8px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.muscle-card:active {
+    transform: scale(0.98);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.muscle-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.muscle-ru-name {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333333;
+    margin-bottom: 4px;
+}
+
+.muscle-lat-name {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #888888;
+}
+
+.muscle-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333333;
+}
