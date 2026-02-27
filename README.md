@@ -21,7 +21,7 @@
 
 1. **Склонируйте репозиторий** (или скачайте и распакуйте архив с кодом):
    ```bash
-   git clone [https://github.com/sepruch/medicineAPP.git](https://github.com/sepruch/medicineAPP.git)
+   git clone https://github.com/sepruch/medicineAPP.git
 
 ```
 
@@ -76,5 +76,3 @@ npm run preview
 * `src/utils/` — вспомогательные функции и имитация базы данных (mock data) для тестирования.
 * `src/App.jsx` — главный файл с настройкой маршрутизации (React Router).
 * `src/main.jsx` — точка входа в React-приложение.
-
-```
