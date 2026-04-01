@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import Footer from '../components/Footer.jsx';
-import './HeadMusclesPage.css';
+import './BackMusclesPage.css';
 import './TestsPage.css';
 import test from '../assets/test.svg';
 import play from '../assets/play.svg';
