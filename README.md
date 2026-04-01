@@ -1,16 +1,77 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Medicine App
 
-Currently, two official plugins are available:
+Интерактивное образовательное веб-приложение для изучения анатомии (миологии), прохождения тестов и ведения медицинских профилей. Проект разработан с акцентом на удобный мобильный интерфейс и быструю работу.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Технологический стек
 
-## React Compiler
+* **React** — библиотека для создания пользовательского интерфейса.
+* **Vite** — невероятно быстрый сборщик проекта.
+* **React Router Dom** — маршрутизация и навигация (SPA).
+* **CSS** — стилизация компонентов.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Требования к окружению
 
-## Expanding the ESLint configuration
+Для запуска проекта на вашем компьютере должен быть установлен [Node.js](https://nodejs.org/) (рекомендуется версия LTS).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Как запустить проект локально
+
+Выполните эти шаги, чтобы развернуть проект на своем компьютере для разработки или тестирования:
+
+1. **Склонируйте репозиторий** (или скачайте и распакуйте архив с кодом):
+```bash
+git clone https://github.com/sepruch/medicineAPP.git
+
+```
+
+2. **Перейдите в директорию проекта**:
+```bash
+cd medicine_app
+
+```
+
+
+3. **Установите все необходимые зависимости**:
+```bash
+npm install
+
+```
+
+
+4. **Запустите сервер для разработки**:
+```bash
+npm run dev
+
+```
+
+
+5. **Откройте приложение в браузере**.
+В терминале появится локальная ссылка (обычно это `http://localhost:5173/`). Перейдите по ней, чтобы увидеть работающий проект.
+*(Совет: для просмотра мобильного интерфейса используйте инструменты разработчика в браузере — клавиша F12).*
+
+## Сборка для продакшена (Production)
+
+Если вам нужно собрать проект для деплоя (размещения на хостинге), используйте команду:
+
+```bash
+npm run build
+
+```
+
+*Vite сгенерирует оптимизированные статические файлы в папку `dist`, которые готовы к публикации на любом статичном хостинге (например, GitHub Pages, Vercel, Netlify).*
+
+Чтобы локально протестировать собранную production-версию перед деплоем, выполните:
+
+```bash
+npm run preview
+
+```
+
+## Структура проекта
+
+* `src/assets/` — статические файлы: изображения, иконки (SVG, PNG) и локальные шрифты.
+* `src/components/` — переиспользуемые UI-компоненты (например, `Header`, `Footer`).
+* `src/pages/` — основные страницы приложения (Главная, Тесты, Карточки мышц).
+* `src/utils/` — вспомогательные функции и имитация базы данных (mock data) для тестирования.
+* `src/App.jsx` — главный файл с настройкой маршрутизации (React Router).
+* `src/main.jsx` — точка входа в React-приложение.
