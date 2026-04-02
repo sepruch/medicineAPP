@@ -10,9 +10,14 @@ function MainPage() {
                 <div className="image-container">
                     <img className="man-image" src={man} alt="человек" />
 
-                    <Link to="/back-muscles" className="muscle-link head-link">
+                    <Link to="/back-muscles" className="muscle-link back-link">
                         <span className="muscle-text">Мышцы спины</span>
-                        <div className="muscle-line"></div>
+
+                        {/* Контейнер для двух линий */}
+                        <div className="line-wrapper">
+                            <div className="muscle-line-horizontal"></div>
+                            <div className="muscle-line-angled"></div>
+                        </div>
                     </Link>
                 </div>
             </main>

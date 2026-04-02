@@ -1,10 +1,14 @@
 .app-header {
-    width: 100%;
-    background-color: #EBEBEB; /* Светло-серый фон, как на макете */
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15); /* Тень из image_2.png */
-    position: sticky; /* Чтобы хедер оставался наверху при прокрутке */
-    top: 0;
+    width: calc(100% - 32px); /* Делаем отступы по краям */
+    margin: 16px auto; /* Отступ сверху и центрирование */
+    background-color: #EBEBEB;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 16px; /* Шапка прилипает чуть ниже верхнего края экрана */
     z-index: 100;
+
+    /* Делаем полностью круглые края со всех сторон */
+    border-radius: 60px;
 }
 
 .header-container {

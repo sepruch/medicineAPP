@@ -23,9 +23,9 @@ export const mainBackGroups = [
 // Подгруппы поверхностных мышц
 export const superficialSubgroups = [
     {
-        id: 'shoulder-gridle',
+        id: 'shoulder-girdle',
         ruName: 'Прикрепляющиеся на поясе верхней конечности и плече',
-        path: '/back-muscles/superficial/shoulder-gridle'
+        path: '/back-muscles/superficial/shoulder-girdle'
     },
     {
         id: 'ribs',
@@ -67,14 +67,24 @@ export const autochthonousGroups = [
 
 // Глубокие -> Аутохтонные -> Латеральный тракт (ЛТ - скобка включает п. 3, 4, 5)
 export const lateralTractMuscles = [
-    { id: 'erector-spinae', ruName: 'Мышца, выпрямляющая позвоночник', latName: 'm. erector spinae', path: '/muscle/erector-spinae' },
+    {
+        id: 'erector-spinae',
+        ruName: 'Мышца, выпрямляющая позвоночник',
+        latName: 'm. erector spinae',
+        path: '/back-muscles/deep/autochthonous/lateral/erector-spinae'
+    },
     { id: 'intertransversarii-post-cervicis', ruName: 'Задние межпоперечные мышцы шеи', latName: 'mm. intertransversarii posteriores cervicis', path: '/muscle/intertransversarii-post-cervicis' },
     { id: 'intertransversarii-med-lumborum', ruName: 'Медиальные межпоперечные мышцы поясницы', latName: 'mm. intertransversarii mediales lumborum', path: '/muscle/intertransversarii-med-lumborum' }
 ];
 
 // Глубокие -> Аутохтонные -> Медиальный тракт (МТ - скобка включает п. 6-11)
 export const medialTractMuscles = [
-    { id: 'transversospinales', ruName: 'Поперечно-остистые мышцы', latName: 'mm. transversospinales', path: '/muscle/transversospinales' },
+    {
+        id: 'transversospinales',
+        ruName: 'Поперечно-остистые мышцы',
+        latName: 'mm. transversospinales',
+        path: '/back-muscles/deep/autochthonous/medial/transversospinales'
+    },
     { id: 'interspinales', ruName: 'Межостистые мышцы', latName: 'mm. interspinales', path: '/muscle/interspinales' },
     { id: 'obliquus-capitis-sup', ruName: 'Верхняя косая мышца головы', latName: 'm. obliquus capitis superior', path: '/muscle/obliquus-capitis-sup' },
     { id: 'obliquus-capitis-inf', ruName: 'Нижняя косая мышца головы', latName: 'm. obliquus capitis inferior', path: '/muscle/obliquus-capitis-inf' },
@@ -102,3 +112,48 @@ export const ribsMuscles = [
     { id: 'serratus-superior', ruName: 'Задняя верхняя зубчатая мышца', latName: 'm. serratus posterior superior', path: '/muscle/serratus-superior' },
     { id: 'serratus-inferior', ruName: 'Задняя нижняя зубчатая мышца', latName: 'm. serratus posterior inferior', path: '/muscle/serratus-inferior' }
 ];
+
+// ==========================================
+// НОВЫЙ 5 УРОВЕНЬ: Вложенные группы
+// ==========================================
+
+// Состав m. erector spinae
+export const erectorSpinaeMuscles = [
+    { id: 'iliocostalis', ruName: 'Подвздошно-реберная мышца', latName: 'm. iliocostalis', path: '/muscle/iliocostalis' },
+    { id: 'longissimus', ruName: 'Длиннейшая мышца', latName: 'm. longissimus', path: '/muscle/longissimus' },
+    { id: 'spinalis', ruName: 'Остистая мышца', latName: 'm. spinalis', path: '/muscle/spinalis' }
+];
+
+// Состав mm. transversospinales
+export const transversospinalesMuscles = [
+    { id: 'semispinalis', ruName: 'Полуостистая мышца', latName: 'm. semispinalis', path: '/muscle/semispinalis' },
+    { id: 'multifidi', ruName: 'Многораздельные мышцы', latName: 'mm. multifidi', path: '/muscle/multifidi' },
+    { id: 'rotatores', ruName: 'Вращатели', latName: 'mm. rotatores', path: '/muscle/rotatores' }
+];
+
+// ==========================================
+// РЕЕСТР МЕНЮ (ДЛЯ ДИНАМИЧЕСКИХ ТЕСТОВ)
+// ==========================================
+export const menuRegistry = {
+    // Корень всех тестов
+    'root': [
+        { id: 'back-muscles', ruName: 'Мышцы спины', path: '/test-menu/back-muscles' }
+        // { id: 'head-muscles', ruName: 'Мышцы головы', path: '/test-menu/head-muscles' }
+    ],
+    // 1 уровень
+    'back-muscles': mainBackGroups,
+    // 2 уровень
+    'superficial': superficialSubgroups,
+    'deep': deepSubgroups,
+    // 3 уровень
+    'shoulder-girdle': shoulderGirdleMuscles,
+    'ribs': ribsMuscles,
+    'autochthonous': autochthonousGroups,
+    'ventral': ventralDeepMuscles,
+    // 4 уровень
+    'lateral': lateralTractMuscles,
+    'medial': medialTractMuscles,
+    // 5 уровень
+    'erector-spinae': erectorSpinaeMuscles,
+    'transversospinales': transversospinalesMuscles
+};

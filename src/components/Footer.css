@@ -13,8 +13,8 @@
 }
 
 .icons {
-    width: 21px;
-    height: 21px;
+    width: 56px;
+    height: 56px;
     object-fit: contain;
     transition: none;
 }
@@ -24,11 +24,11 @@
     font-weight: 500;
     font-family: 'Montserrat Alternates', sans-serif;
     color: #5E5E5E;
-    margin-top: 4px;
+    margin-top: -10px;
 }
 .nav-item {
     display: flex;
-    margin-top: 4px;
+    margin-top: -4px;
     flex-direction: column;
     align-items: center;
     text-decoration: none;

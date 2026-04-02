@@ -1,81 +1,151 @@
-.tests-complex-card {
-    display: flex;
-    flex-direction: column;
-    padding: 16px;
-    background: #FFFFFF;
-    border: 1px solid #EAEAEA;
-    border-radius: 8px;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
-    margin-bottom: 16px;
+.tests-page {
+    padding: 20px 20px 100px 20px; /* Отступ снизу для футера */
+    background-color: #F8F9FA;
+    min-height: 100vh;
 }
 
-.tests-complex-title {
-    font-family: 'Montserrat Alternates', sans-serif;
+.tests-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tests-page-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-family: 'MontserratAlternates-Bold', sans-serif;
+}
+
+/* Стили для заголовков иерархии */
+.test-category-title {
+    font-size: 18px;
+    color: #555555;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #EAEAEA;
+    font-family: 'MontserratAlternates-SemiBold', sans-serif;
+}
+
+.test-category-block {
+    margin-bottom: 20px;
+}
+
+/* Карточка теста */
+.test-card {
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.test-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Звездочка слева */
+.test-favorite {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 18px;
+}
+
+.test-star-icon {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.test-star-icon:active {
+    transform: scale(1.3);
+}
+
+/* Текстовый блок посередине */
+.test-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.test-ru-name {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     color: #333333;
-    margin-bottom: 16px;
-    text-align: left;
+    line-height: 1.2;
+    font-family: 'MontserratAlternates-SemiBold', sans-serif;
 }
 
-.tests-actions-row {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-}
-
-.test-action-btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 0;
-    -webkit-tap-highlight-color: transparent;
-}
-
-.test-action-btn span {
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    color: #333333;
-}
-
-/* Стили для карточек "Аналогично" */
-.test-simple-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px;
-    background: #FFFFFF;
-    border: 1px solid #EAEAEA;
-    border-radius: 8px;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
-    margin-bottom: 16px;
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-}
-
-.test-simple-info {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    gap: 8px;
-}
-
-.test-simple-top {
-    font-family: 'Montserrat Alternates', sans-serif;
+.test-lat-name {
     font-size: 14px;
-    font-weight: 400;
-    color: #333333;
+    color: #888888;
+    font-style: italic;
 }
 
-.test-simple-bottom {
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    color: #000000;
+/* Индикатор прогресса справа */
+.test-progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E8F5E9; /* Нежно-зеленый фон */
+    padding: 6px 14px;
+    border-radius: 26px;
+    margin-left: 15px;
+}
+
+.progress-text {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #4CAF50; /* Зеленый текст */
+    font-family: 'MontserratAlternates-Bold', sans-serif;
+}
+
+.tests-nav-buttons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.nav-btn {
+    flex: 1;
+    max-width: 150px;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-size: 14px;
+}
+
+.latin-btn {
+    background-color: #BBDEFB;
+    color: #3d67ff;
+}
+
+.latin-btn:hover { background-color: #1d4eff; }
+
+.favorites-btn {
+    background-color: #BBDEFB;
+    color: #3d67ff;
+}
+
+.favorites-btn:hover { background-color: #1d4eff; }
+
+.errors-btn {
+    background-color: #FFEBEE;
+    color: #D32F2F;
+}
+
+.errors-btn:hover {
+    background-color: #FFCDD2;
 }

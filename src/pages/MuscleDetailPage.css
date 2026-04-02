@@ -35,7 +35,6 @@
     line-height: 1;
 }
 
-/* Адаптивный плеер для видео */
 .video-responsive {
     overflow: hidden;
     padding-bottom: 56.25%; /* Соотношение сторон 16:9 */
@@ -100,7 +99,7 @@
 }
 
 .muscle-title-ru {
-    color: #B8C7FE;
+    color: #3d67ff;
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 24px;
     font-weight: 500;
@@ -136,7 +135,7 @@
 
 .functions-button {
 
-    background-color: #B8C7FE;
+    background-color: #3d67ff;
     color: #FFFFFF;
     border: none;
     border-radius: 12px;

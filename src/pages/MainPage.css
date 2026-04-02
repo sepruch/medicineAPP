@@ -35,22 +35,38 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    top: 25%;
+    left: 10%;
 }
 
 .muscle-text {
     font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     color: #4A4A4A;
     margin-bottom: 2px;
 }
 
-.muscle-line {
-    width: 60px;
+.muscle-line-horizontal {
+    width: 60px; /* Длина прямой части */
     height: 1px;
-    background-color: #A0A0A0;
+    background-color: #4A4A4A; /* Цвет линии */
 }
 
-.head-link {
-    top: 10%;
-    right: 10%;
+/* Вторая линия (которая идет под углом к мышце) */
+.muscle-line-angled {
+    width: 45px; /* Длина наклонной части */
+    height: 1px;
+    background-color: #4A4A4A;
+    position: absolute;
+
+    /* Начинается ровно там, где заканчивается горизонтальная линия (left = width горизонтальной) */
+    left: 60px;
+
+    /* Точка вращения - левый край линии */
+    transform-origin: left center;
+
+    /* Угол наклона.
+       45deg - наклонит ВНИЗ к спине
+       -45deg (с минусом) - наклонит ВВЕРХ к спине */
+    transform: rotate(45deg);
 }
